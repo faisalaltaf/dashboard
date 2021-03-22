@@ -13,7 +13,7 @@
 
 <div class="col-lg-6 container">
     <div class="card">
-        <div class="card-header">Manage  f Category name faisal</div>
+        <div class="card-header">Manage  Category</div>
         <div class="card-body">
 {{session('massage')}}
             <form action="{{ route('category.insert') }}" method="post">
