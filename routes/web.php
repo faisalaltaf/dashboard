@@ -21,5 +21,6 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('home/Category', [CategoryController::class, 'index'])->name('category');
-Route::get('home/manage_Category', [CategoryController::class, 'manage_category'])->name('manage_category');
-Route::post('home/category_manage_process', [CategoryController::class, 'category_manage_process'])->name('category.insert');
+Route::get('home/Category/manage_Category', [CategoryController::class, 'manage_category'])->name('manage_category');
+Route::post('home/Category/category_manage_process', [CategoryController::class, 'category_manage_process'])->name('category.insert');
+Route::get('home/Category/delete/{id}', [CategoryController::class, 'delete']);
