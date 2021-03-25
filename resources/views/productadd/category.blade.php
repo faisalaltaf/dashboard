@@ -41,7 +41,7 @@
                         <a href="{{url('home/Category/delete/')}}/{{($list->id)}}">
                         <button type="button" class="btn btn-danger">delete</button>
                         </a>
-                        <a href="{{url('home/manage_category/')}}/{{($list->id)}}">
+                        <a href="{{url('home/Category/manage_Category/')}}/{{($list->id)}}">
                         <button type="button" class="btn btn-success">Edit</button>
                         </a>
                     </tr>

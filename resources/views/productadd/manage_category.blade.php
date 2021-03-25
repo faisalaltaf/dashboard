@@ -15,14 +15,14 @@
     <div class="card">
 
         <div class="card-header">Manage Category</div>
-       
+
         <div class="card-body">
-            <form action="{{ route('category.insert') }}" method="post">
+            <form action="{{ route('category.manage_category_proccess') }}" method="post">
                 @csrf
 
                 <div class="form-group">
                     <label for="cc-payment" class="control-label mb-1">Category Add</label>
-                    <input id="cc-pament" name="category_name" type="text" class="form-control" required>
+                    <input id="cc-pament" value="{{$category_slug}}" name="category_name" type="text" class="form-control" required>
 
 
                 </div>
@@ -36,7 +36,7 @@
         </div>
         <div class="form-group has-success mx-4 ">
             <label for="cc-name" class="control-label mb-1">Slug</label>
-            <input id="cc-name" name="category_slug" type="text" class="form-control cc-name valid" required>
+            <input id="cc-name" name="category_slug" value="{{$category_slug}}" type="text" class="form-control cc-name valid" required>
             @error('category_slug')
             <div class="alert alert-primary" role="alert">
 
@@ -51,7 +51,9 @@
             <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block">
                 submit
             </button>
+
         </div>
+        <input type="hidden" name="id" value="{{$id}}" />
         </form>
     </div>
 </div>
